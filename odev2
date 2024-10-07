@@ -1,0 +1,47 @@
+1.Soru:
+Future<int> sumList(List<int> liste) async {
+  int toplam = 0;
+  for (var eleman in liste) {
+    toplam += eleman;
+  }
+  return toplam;
+}
+void main() async {
+  var liste = [12,36,43,62];
+  var sonuc = await sumList(liste);
+  print('Toplam: $sonuc'); 
+}
+2.Soru:
+List<int> sadeceTekSayilar(List<int> liste) {
+  List<int> tekSayilar = [];
+  for (var eleman in liste) {
+    if (eleman % 2 != 0) {
+      tekSayilar.add(eleman);
+    }
+  }
+  return tekSayilar;
+}
+void main() {
+  var liste = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  var tekSayilarListesi = sadeceTekSayilar(liste);
+  print(tekSayilarListesi); 
+}
+
+
+
+
+
+
+3.Soru:
+List<int> tersCevir(List<int> liste) {
+  List<int> tersListe = [];
+  for (int a = liste.length - 1; a >= 0; a--) {
+    tersListe.add(liste[a]);
+  }
+  return tersListe;
+}
+void main () {
+  var liste = [12,32,55,60];
+  var tersListe = tersCevir(liste);
+  print(tersListe); // Çıktı: [5, 4, 3, 2, 1]
+}
